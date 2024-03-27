@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import '../../utiles/styles/App.scss'
 
 
 function App() {
@@ -6,7 +7,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='AppDiv'>
         <h1>hello world</h1>
       </div>
       

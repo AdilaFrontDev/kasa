@@ -7,18 +7,21 @@ import APropos from './pages/APropos'
 import FicheLogement from './pages/FicheLogement'
 import Error from './pages/Error'
 
+import Header from './components/Header'
+import Footer from './components/Footer'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
+    <Header />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/APropos' element={<APropos />}/>
-        <Route path='/Error' element={<Error />}/>
+        <Route path='*' element={<Error />}/>
         <Route path='/FicheLogement' element={<FicheLogement />}/>
       </Routes>
-      
+      <Footer />
     </Router>
     
   </React.StrictMode>,
