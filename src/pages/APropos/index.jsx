@@ -5,7 +5,7 @@ import Banner from '../../components/Banner'
 
 function APropos() {
     return(
-        <div>
+        <div className='APropos'>
             <Banner/>
         </div>
     )
