@@ -4,11 +4,13 @@ import '../../utiles/styles/App.scss'
 
 function Header() {
     return(
-        <div className='HederContainer'>
-            <img className='HeaderLogo' src={Logo} alt="Logo de Kasa"/>
-            <nav>
-                <Link to="/">Accueil</Link>
-                <Link to="/APropos">A Propos</Link>
+        <div className='Header'>
+            <Link to="/">
+                            <img className='Header__logo' src={Logo} alt="Logo de Kasa"/>
+            </Link>
+            <nav className='Header__nav'>
+                <Link to="/" className='Header__nav__Link'>Accueil</Link>
+                <Link to="/APropos" className='Header__nav__Link'>A Propos</Link>
             </nav>
         </div>
     )

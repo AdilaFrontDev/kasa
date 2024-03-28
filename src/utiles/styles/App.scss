@@ -1,13 +1,129 @@
-.AppDiv{
-    background-color: blueviolet;
+$primary-color: #FF6060;
+
+
+*{
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
-.HeaderLogo {
-    height: 68px;
-}
+ 
+// Components
+        //Header
 
-.HederContainer{
+.Header{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
+    min-width: 375px;
+    margin : 20px;
+    &__logo {
+        height: 47px;
+        @media(min-width:576px) {
+            height: 68px;
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-around;
+        gap: 57px;
+        margin-right: 20px;
+        &__Link {
+            text-decoration: none;
+            color: black;
+            font-size: 12px;
+            @media(min-width:576px) {
+                font-size: 24px;
+            }
+        }
+    }
+    
+}
+        // Footer
+
+.Footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    height: 209px;
+    color: white;
+    width: 100%;
+    min-width: 375px;
+    @media(min-width:576px) {
+        justify-content: center;  
+    }
+    &__logo{
+        height: 40px;
+        margin-top: 66px;
+    }
+    &__mentions {
+        width: 122px;            
+        text-align: center;
+        font-size: 12px;
+        padding-top: 10px;
+        @media(min-width:576px) {
+            margin: 29px 0 29px 0;
+            font-size: 24px; 
+            width: 100%;       
+        }
+    }
+}
+
+        // Banner
+
+.Banner{
+    position: relative;
+    &__img{
+        z-index: 1;
+    }
+    &__text{
+        z-index: 5;
+    }
+}
+/// Pages 
+        // Error
+
+.Error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $primary-color;
+    width: 100%;
+    margin: auto;
+    &__404 {
+        font-size: 96px;
+        font-weight: 700;
+        margin: 113px 0 113px 0;
+        @media(min-width:576px){
+            font-size: 288px;
+            margin: 139px 0 139px 0;
+            padding: 0 30px 0 30px;
+        }
+    }
+    &__message {
+        font-weight: 500;
+        font-size: 18px;
+        width: 70%;
+        text-align: center;
+        margin-bottom: 113px;
+        @media(min-width:576px) {
+            font-size: 36px; 
+            width: 90%;       
+            margin-bottom: 139px;
+        }
+    }
+    &__homeLink {
+        color: black;
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 139px;
+        @media(min-width:576px){
+            font-size: 18px;
+        }
+    }
+
 }
