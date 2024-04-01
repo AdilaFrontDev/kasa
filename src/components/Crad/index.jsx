@@ -1,4 +1,6 @@
 import '../../utiles/styles/App.scss'
+import { Link } from 'react-router-dom'
+
 
 function Crad({title, cover}) {
     return(

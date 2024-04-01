@@ -24,7 +24,7 @@ body {
    position: relative;
 }
  
-.APropos, .Home, .Error {
+.APropos, .Home, .Error, .FicheLogement {
     flex-grow: 1;
     width: 100%;
     display: flex;
@@ -81,10 +81,9 @@ body {
     color: white;
     width: 100%;
     min-width: 375px;
-  
     @media(min-width:576px) {
         justify-content: center;         
-        margin-top: 66px;
+        
     }
     &__logo{
         height: 40px;
@@ -188,7 +187,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     @media(min-width:710px) {
         width: 1023px;
     }
@@ -243,6 +242,9 @@ body {
     align-items: center;
     flex-direction: column;
     padding: 27px 20px 27px 20px;
+    @media (min-width: 710px){
+        padding-bottom: 50px;
+    }
     &-Cards{
         display: flex;
         flex-direction: row;
@@ -264,12 +266,12 @@ body {
 .Error {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     color: $primary-color;
     width: 100%;
     margin: auto;
-    padding: 27px 20px 27px 20px;
+    padding: 0 20px 27px 20px;
     &__404 {
         font-size: 96px;
         font-weight: 700;
@@ -321,6 +323,26 @@ body {
         gap: 20px;
         @media (min-width: 710px){
             padding-top: 38px;
+            padding-bottom: 38px;
         }
+    }
+}
+
+        ///FicheLogement
+
+.FicheLogement{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    &__img{
+        height: 255px;
+        width: 335px;
+        border-radius: 10px;
+    }
+    &__collapse{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
     }
 }
