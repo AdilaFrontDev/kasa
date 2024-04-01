@@ -1,24 +1,10 @@
 import '../../utiles/styles/App.scss'
-import BannerHome from '../../assets/banner-home.png'
-import BannerAPropos from '../../assets/banner-apropos.png'
 
-const imagesBanner = [
-    {
-        picture: BannerHome,
-        text: "Chez vous, partout et ailleurs"
-    },
-    {
-        picture: BannerAPropos,
-        text: ""
-    }
-]
-console.log(imagesBanner)
-
-function Banner({picture, text}) {
+function Banner({banner}) {
     return(
         <div className='Banner'>
-            <img className='Banner__img' src={picture} alt="banner" />
-            <p className='Banner__text'>{text}</p>
+            <img className='Banner-img' src={banner.picture} alt="banner" />
+            <p className='Banner-text'>{banner.text}</p>
         </div>
     )
 }

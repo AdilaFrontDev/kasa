@@ -14,7 +14,7 @@ import Footer from './components/Footer'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Router>
-    <Header />
+      <Header />
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/APropos' element={<APropos />}/>
@@ -23,6 +23,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       </Routes>
       <Footer />
     </Router>
-    
   </React.StrictMode>,
 )
