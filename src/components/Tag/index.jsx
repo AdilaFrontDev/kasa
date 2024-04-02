@@ -1,8 +1,12 @@
 import '../../utiles/styles/App.scss'
 
-function Tag({}) {
+function Tag({tags}) {
     return(
-        <div></div>
+        <div className='Tag'>
+            {tags.map((tag) => (
+                <p key={tags.indexOf(tag)} className='Tag-item'>{tag}</p>
+            ))}
+        </div>
     )
 }
 
