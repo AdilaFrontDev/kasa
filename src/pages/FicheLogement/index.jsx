@@ -24,14 +24,14 @@ function FicheLogement() {
                 pictures={annonce.pictures}
             />
             <div className='FicheLogement__details'>
-                <div className='FicheLogement__details__1'>
-                    <h1 className='FicheLogement__details__1-title'>{annonce.title}</h1>
-                    <p className='FicheLogement__details__1-location'>{annonce.location}</p>
+                <div className='FicheLogement__details__goodInformation'>
+                    <h1 className='FicheLogement__details__goodInformation-title'>{annonce.title}</h1>
+                    <p className='FicheLogement__details__goodInformation-location'>{annonce.location}</p>
                     <Tag
                         tags={annonce.tags}
                     />
                 </div>
-                <div className='FicheLogement__details_2'>
+                <div className='FicheLogement__details__rateAndHost'>
                     <Host
                         name={host.name}
                         picture={host.picture}
