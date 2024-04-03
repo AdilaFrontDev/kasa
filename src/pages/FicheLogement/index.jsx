@@ -8,6 +8,7 @@ import Collapse from '../../components/Collapse'
 import Host from '../../components/Host'
 import Tag from '../../components/Tag'
 import Star from '../../components/Star'
+import Gallery from '../../components/Gallery'
 
 
 
@@ -19,7 +20,9 @@ function FicheLogement() {
     
     return(
         <div className='FicheLogement'>
-            <img src={annonce.cover} className='FicheLogement__img'/>
+            <Gallery
+                pictures={annonce.pictures}
+            />
             <div className='FicheLogement__details'>
                 <div className='FicheLogement__details__1'>
                     <h1 className='FicheLogement__details__1-title'>{annonce.title}</h1>
