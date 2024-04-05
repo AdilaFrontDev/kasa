@@ -27,16 +27,27 @@ function Gallery({pictures}) {
         console.log('hahahaah')
     }
 
-    return(
-        <div className='Gallery'>
-            <img className='Gallery-img' src={pictures[i]} alt="Photo de la gallerie"/>
-            <div className='Gallery-arrows'>
-                    <img className='Gallery-arrows-icon' src={arrowLeft} alt="Flèche de navigation gauche" onClick={previousSlide}/>
-                    <img className='Gallery-arrows-icon' src={arrowRight} alt="Flèche de navigation droite" onClick={nextSlide}/>
+    if (nbPictures === 1) {
+        return (
+            <div className='Gallery'>
+                <img className='Gallery-img' src={pictures[i]} alt="Photo de la gallerie"/>
             </div>
-            <p className='Gallery-numbering'>{i+1}/{nbPictures}</p>
-        </div>
-    )
+        )
+    } else {
+        return(
+            <div className='Gallery'>
+                <img className='Gallery-img' src={pictures[i]} alt="Photo de la gallerie"/>
+                <div className='Gallery-arrows'>
+                        <img className='Gallery-arrows-icon' src={arrowLeft} alt="Flèche de navigation gauche" onClick={previousSlide}/>
+                        <img className='Gallery-arrows-icon' src={arrowRight} alt="Flèche de navigation droite" onClick={nextSlide}/>
+                </div>
+                <p className='Gallery-numbering'>{i+1}/{nbPictures}</p>
+            </div>
+        )
+    }
+
+
+    
 }
 
 export default Gallery
