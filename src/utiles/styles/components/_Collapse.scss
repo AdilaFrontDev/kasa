@@ -1,0 +1,77 @@
+.Collapse{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+    max-width: 335px;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 0;
+    @media(min-width:710px) {
+        max-width: 1023px;
+        min-width: 335px;
+        width: 100%;    
+    }
+    &__item{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 30px;
+        background-color: $primary-color;
+        border-radius: 5px;
+        z-index: 5;
+        @media(min-width:710px) {
+            height: 54px;
+        }
+        &-text{
+            color: white;
+            font-weight: 700;
+            font-size: 13px;
+            margin-left: 10px;
+            @media(min-width:710px) {
+                font-size: 24px;
+            }    
+        }
+        &-icon{
+            height: 9px;
+            width: 16px;
+            margin-right: 10px;
+            transition: transform 0.5s ease-in-out;
+            @media(min-width:710px) {
+                height: 14px;
+                width: 24px;
+            }              
+        }
+    }
+    .turnDown{
+        transform: rotate(180deg);
+    }  
+    &-text{
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        font-size: 12px;
+        gap: 5px; 
+        width: 100%;
+        max-height: none;        
+        padding: 13px 20px 19px 20px;
+        z-index: 1;
+        background-color: $secondary-background;
+        @media(min-width:710px) {
+            font-size: 18px;
+        }
+        
+    }
+    .hidden{
+        animation-duration: 0.5s;
+        animation-name: hiddeCollapse;    
+        animation-fill-mode: forwards;    
+    }
+    .show{
+        animation-duration: 0.5s;
+        animation-name: hiddeCollapseOut;
+        animation-fill-mode: backwards;        
+    }
+}

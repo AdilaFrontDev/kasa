@@ -1,0 +1,22 @@
+.APropos{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 0 20px 27px 20px;
+    @media (min-width: 710px){
+        padding-top: 27px;
+    }
+    &__description{
+        @include FlexCenter;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+        @media (min-width: 710px){
+            padding-top: 38px;
+            padding-bottom: 38px;
+            max-width: 1023px;
+        }
+    }
+}

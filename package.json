@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sass": "sass ./src/utiles/styles/App.scss:./public/styles/App.css -w --style compressed",
+    "prefix": "postcss ./public/styles/App.css --use autoprefixer -d ./public/styles/prefixed/"
   },
   "dependencies": {
     "prettier": "^3.2.5",

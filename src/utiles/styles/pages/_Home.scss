@@ -1,0 +1,22 @@
+.Home{
+    @include FlexCenter;
+    flex-direction: column;
+    padding: 27px 20px 27px 20px;
+    @media (min-width: 710px){
+        padding-bottom: 50px;
+        gap:30px;
+    }
+    &-Cards{
+        @include FlexCenter;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        @media(min-width:850px){
+            background-color: $secondary-background;
+            max-width: 1240px;
+            border-radius: 25px;
+            gap: 50px;
+            padding: 56px 0 45px 0;
+        }
+    }
+}

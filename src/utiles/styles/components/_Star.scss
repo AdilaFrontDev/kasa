@@ -1,0 +1,16 @@
+.Star{
+    display: flex;
+    gap: 8px;
+    @media (min-width: 710px){
+        gap: 20px;
+    }
+    &-item{
+        width: 13px;
+        height: 13,4px;
+        fill: $primary-color;
+        @media (min-width: 710px){
+            width: 24.75px;
+            height: 24px;
+        }
+    }
+}

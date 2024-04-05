@@ -1,0 +1,26 @@
+.Footer {
+    @include FlexCenter;
+    flex-direction: column;
+    width: 100%;
+    min-width: 375px;
+    height: 209px;
+    background-color: black;
+    color: white;
+    @media(min-width:710px) {
+        justify-content: center;         
+    }
+    &__logo{
+        height: 40px;
+    }
+    &__mentions {
+        text-align: center;
+        font-size: 12px;
+        width: 122px;            
+        padding-top: 10px;
+        @media(min-width:710px) {
+            font-size: 24px; 
+            width: 100%;  
+            margin: 29px 0 29px 0;     
+        }
+    }
+}

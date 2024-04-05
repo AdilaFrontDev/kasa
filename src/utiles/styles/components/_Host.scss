@@ -1,0 +1,28 @@
+.Host{
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    &-name{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 2px;
+        font-size: 12px;
+        color: $primary-color;
+        @media (min-width: 710px){
+            justify-content: space-around;
+            font-size: 18px;
+        }
+    }
+    &-picture{
+        height: 32px;
+        width: 32px;
+        border-radius: 16px;
+        @media (min-width: 710px){
+            height: 64px;
+            width: 64px;
+            border-radius: 32px;
+        }
+    }
+}

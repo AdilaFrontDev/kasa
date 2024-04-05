@@ -1,0 +1,666 @@
+@keyframes hiddeCollapse {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-1000px);
+    display: none;
+  }
+}
+@keyframes hiddeCollapseOut {
+  from {
+    transform: translateY(-1000px);
+    display: none;
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-grow: 1;
+  position: relative;
+}
+
+.APropos, .Home, .Error, .FicheLogement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 375px;
+  max-width: 1240px;
+  padding: 20px 20px 0 20px;
+}
+@media (min-width: 576px) and (max-width: 710px) {
+  .Header {
+    max-width: 542px;
+  }
+}
+@media (min-width: 710px) {
+  .Header {
+    padding: 50px 20px 0 20px;
+  }
+}
+.Header__logo {
+  height: 47px;
+}
+@media (min-width: 710px) {
+  .Header__logo {
+    height: 68px;
+  }
+}
+.Header__nav {
+  display: flex;
+  justify-content: space-around;
+  gap: 28px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+@media (min-width: 710px) {
+  .Header__nav {
+    gap: 57px;
+    font-size: 24px;
+  }
+}
+.Header__nav__Link {
+  color: black;
+  text-decoration: none;
+}
+.Header__nav__Link--active {
+  color: black;
+  text-decoration: underline;
+}
+
+.Footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  min-width: 375px;
+  height: 209px;
+  background-color: black;
+  color: white;
+}
+@media (min-width: 710px) {
+  .Footer {
+    justify-content: center;
+  }
+}
+.Footer__logo {
+  height: 40px;
+}
+.Footer__mentions {
+  text-align: center;
+  font-size: 12px;
+  width: 122px;
+  padding-top: 10px;
+}
+@media (min-width: 710px) {
+  .Footer__mentions {
+    font-size: 24px;
+    width: 100%;
+    margin: 29px 0 29px 0;
+  }
+}
+
+.Banner {
+  height: 111px;
+  width: 335px;
+  margin: 20px;
+  position: relative;
+}
+@media (min-width: 710px) {
+  .Banner {
+    max-width: 1240px;
+    width: 100%;
+    height: 223px;
+  }
+}
+.Banner-img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  object-fit: cover;
+  filter: brightness(40%);
+  z-index: 1;
+}
+.Banner-text {
+  width: 225px;
+  position: absolute;
+  bottom: 25px;
+  left: 16px;
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 5;
+}
+@media (min-width: 710px) {
+  .Banner-text {
+    font-size: 48px;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    line-height: 223px;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+@media (min-width: 710px) and (max-width: 850px) {
+  .Banner-text {
+    font-size: 32px;
+  }
+}
+
+.Card {
+  position: relative;
+  height: 255px;
+  width: 335px;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 10px;
+}
+@media (min-width: 850px) {
+  .Card {
+    height: 340px;
+    width: 340px;
+  }
+}
+.Card-cover {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  filter: brightness(90%);
+  object-fit: cover;
+  z-index: 1;
+}
+.Card-title {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  right: 20px;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  z-index: 5;
+}
+
+.Collapse {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  max-width: 335px;
+  border-radius: 5px;
+  overflow: hidden;
+  z-index: 0;
+}
+@media (min-width: 710px) {
+  .Collapse {
+    max-width: 1023px;
+    min-width: 335px;
+    width: 100%;
+  }
+}
+.Collapse__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  background-color: #FF6060;
+  border-radius: 5px;
+  z-index: 5;
+}
+@media (min-width: 710px) {
+  .Collapse__item {
+    height: 54px;
+  }
+}
+.Collapse__item-text {
+  color: white;
+  font-weight: 700;
+  font-size: 13px;
+  margin-left: 10px;
+}
+@media (min-width: 710px) {
+  .Collapse__item-text {
+    font-size: 24px;
+  }
+}
+.Collapse__item-icon {
+  height: 9px;
+  width: 16px;
+  margin-right: 10px;
+  transition: transform 0.5s ease-in-out;
+}
+@media (min-width: 710px) {
+  .Collapse__item-icon {
+    height: 14px;
+    width: 24px;
+  }
+}
+.Collapse .turnDown {
+  transform: rotate(180deg);
+}
+.Collapse-text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 12px;
+  gap: 5px;
+  width: 100%;
+  max-height: none;
+  padding: 13px 20px 19px 20px;
+  z-index: 1;
+  background-color: #F6F6F6;
+}
+@media (min-width: 710px) {
+  .Collapse-text {
+    font-size: 18px;
+  }
+}
+.Collapse .hidden {
+  animation-duration: 0.5s;
+  animation-name: hiddeCollapse;
+  animation-fill-mode: forwards;
+}
+.Collapse .show {
+  animation-duration: 0.5s;
+  animation-name: hiddeCollapseOut;
+  animation-fill-mode: backwards;
+}
+
+.Gallery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  min-width: 335px;
+  max-width: 1240px;
+  height: 255px;
+}
+@media (min-width: 710px) {
+  .Gallery {
+    height: 415px;
+  }
+}
+.Gallery-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}
+@media (min-width: 710px) {
+  .Gallery-img {
+    border-radius: 25px;
+  }
+}
+.Gallery-arrows {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  padding: 0 5px 0 5px;
+}
+@media (min-width: 710px) {
+  .Gallery-arrows {
+    padding: 0 23px 0 23px;
+  }
+}
+.Gallery-arrows-icon {
+  width: 11.67px;
+  height: 19.8px;
+}
+@media (min-width: 710px) {
+  .Gallery-arrows-icon {
+    width: 46.68px;
+    height: 79.2px;
+  }
+}
+.Gallery-numbering {
+  position: absolute;
+  bottom: 25px;
+  color: white;
+  font-size: 18px;
+  display: none;
+}
+@media (min-width: 710px) {
+  .Gallery-numbering {
+    display: flex;
+  }
+}
+
+.Host {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.Host-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 12px;
+  color: #FF6060;
+}
+@media (min-width: 710px) {
+  .Host-name {
+    justify-content: space-around;
+    font-size: 18px;
+  }
+}
+.Host-picture {
+  height: 32px;
+  width: 32px;
+  border-radius: 16px;
+}
+@media (min-width: 710px) {
+  .Host-picture {
+    height: 64px;
+    width: 64px;
+    border-radius: 32px;
+  }
+}
+
+.Star {
+  display: flex;
+  gap: 8px;
+}
+@media (min-width: 710px) {
+  .Star {
+    gap: 20px;
+  }
+}
+.Star-item {
+  width: 13px;
+  height: 13, 4px;
+  fill: #FF6060;
+}
+@media (min-width: 710px) {
+  .Star-item {
+    width: 24.75px;
+    height: 24px;
+  }
+}
+
+.Tag {
+  display: flex;
+  justify-content: flex-start;
+  align-items: space-around;
+  gap: 10px;
+}
+.Tag-item {
+  width: 84px;
+  height: 18px;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 18px;
+  color: white;
+  background-color: #FF6060;
+}
+@media (min-width: 710px) {
+  .Tag-item {
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+}
+
+.Home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 27px 20px 27px 20px;
+}
+@media (min-width: 710px) {
+  .Home {
+    padding-bottom: 50px;
+    gap: 30px;
+  }
+}
+.Home-Cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media (min-width: 850px) {
+  .Home-Cards {
+    background-color: #F6F6F6;
+    max-width: 1240px;
+    border-radius: 25px;
+    gap: 50px;
+    padding: 56px 0 45px 0;
+  }
+}
+
+.Error {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: #FF6060;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px 27px 20px;
+}
+.Error__404 {
+  font-size: 96px;
+  font-weight: 700;
+  margin: 113px 0 113px 0;
+}
+@media (min-width: 710px) {
+  .Error__404 {
+    font-size: 288px;
+    margin: 139px 0 139px 0;
+    padding: 0 30px 0 30px;
+  }
+}
+.Error__message {
+  font-weight: 500;
+  font-size: 18px;
+  width: 70%;
+  text-align: center;
+  margin-bottom: 113px;
+}
+@media (min-width: 710px) {
+  .Error__message {
+    font-size: 36px;
+    width: 90%;
+    margin-bottom: 139px;
+  }
+}
+.Error__homeLink {
+  color: black;
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 139px;
+}
+@media (min-width: 710px) {
+  .Error__homeLink {
+    font-size: 18px;
+  }
+}
+
+.APropos {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px 27px 20px;
+}
+@media (min-width: 710px) {
+  .APropos {
+    padding-top: 27px;
+  }
+}
+.APropos__description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+@media (min-width: 710px) {
+  .APropos__description {
+    padding-top: 38px;
+    padding-bottom: 38px;
+    max-width: 1023px;
+  }
+}
+
+.FicheLogement {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 582px;
+  padding: 27px 20px 27px 20px;
+}
+@media (min-width: 710px) {
+  .FicheLogement {
+    max-width: 1240px;
+    margin-top: 23px;
+    gap: 20px;
+    padding: 50px 20px 50px 20px;
+  }
+}
+.FicheLogement__details {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 710px) {
+  .FicheLogement__details {
+    flex-direction: row;
+  }
+}
+.FicheLogement__details__goodInformation {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0 3px 0;
+}
+@media (min-width: 710px) {
+  .FicheLogement__details__goodInformation {
+    width: 50%;
+  }
+}
+.FicheLogement__details__goodInformation-title {
+  color: #FF6060;
+  font-weight: 500;
+  font-size: 18px;
+}
+@media (min-width: 710px) {
+  .FicheLogement__details__goodInformation-title {
+    font-size: 36px;
+  }
+}
+.FicheLogement__details__goodInformation-location {
+  font-size: 14px;
+}
+@media (min-width: 710px) {
+  .FicheLogement__details__goodInformation-location {
+    font-size: 18px;
+  }
+}
+.FicheLogement__details__rateAndHost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+  padding: 13px 0 13px 0;
+}
+@media (min-width: 710px) {
+  .FicheLogement__details__rateAndHost {
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 20px;
+    width: 50%;
+  }
+}
+@media (min-width: 710px) {
+  .FicheLogement {
+    padding-top: 27px;
+  }
+}
+.FicheLogement__img {
+  height: 255px;
+  width: 335px;
+  border-radius: 10px;
+}
+.FicheLogement__collapse {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+@media (min-width: 710px) {
+  .FicheLogement__collapse {
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 10px;
+  }
+}
+.FicheLogement__collapse .Collapse {
+  max-width: 582px;
+  width: 100%;
+}
+@media (min-width: 710px) {
+  .FicheLogement__collapse .Collapse__item-text {
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

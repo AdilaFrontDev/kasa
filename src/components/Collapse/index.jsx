@@ -4,14 +4,13 @@ import React from 'react'
 import { useState } from 'react'
 
 import iconCollapse from '../../assets/collapse-icon.png'
-import { keyframes } from 'styled-components'
-
-
 
 function Collapse({title, content}) {
     const [isActive, setActive] = useState("false")
 
-    function toogleCollapse(){
+    function toogleCollapse(e){
+        e.preventDefault()
+        e.stopPropagation()
         setActive(!isActive)   
     }
     return(
@@ -22,7 +21,7 @@ function Collapse({title, content}) {
             </div>
             <div className={isActive ? ' Collapse-text hidden' : 'Collapse-text show '}>
                 {content.map((element) => (
-                    <p className={isActive ? 'Collapse-text-p ' : 'Collapse-text-p'} key={content.indexOf(element)}>{element}</p>
+                    <p className='Collapse-text-p' key={content.indexOf(element)}>{element}</p>
                 ))}
             </div>
         </div>

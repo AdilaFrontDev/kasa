@@ -1,0 +1,24 @@
+.Tag{
+    display: flex;
+    justify-content: flex-start;
+    align-items: space-around;
+    gap: 10px;
+    &-item{
+        width: 84px;
+        height: 18px;
+        border-radius: 5px;
+        font-size: 10px;
+        font-weight: 700;
+        text-align: center;
+        line-height: 18px;
+        color: white;
+        background-color: $primary-color;
+        @media (min-width: 710px){
+            width: 115px;
+            height: 25px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}

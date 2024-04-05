@@ -1,0 +1,40 @@
+.Header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    min-width: 375px;
+    max-width: 1240px;
+    padding: 20px 20px 0 20px;
+    @media(min-width:576px) and (max-width:710px) {
+        max-width: 542px;       
+    }
+    @media(min-width:710px){
+        padding: 50px 20px 0 20px;
+    } 
+    &__logo {
+        height: 47px;
+        @media(min-width:710px) {
+            height: 68px;
+        }
+    }
+    &__nav {
+        display: flex;
+        justify-content: space-around;
+        gap: 28px;
+        margin-left: 20px;
+        font-size: 12px;
+        @media(min-width:710px) {
+            gap: 57px;
+            font-size: 24px;
+        }
+        &__Link {
+            color: black;
+            text-decoration: none;
+            &--active {
+                color: black;
+                text-decoration: underline;
+            }
+        }
+    }
+}

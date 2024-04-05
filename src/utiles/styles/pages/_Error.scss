@@ -1,0 +1,41 @@
+.Error {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    color: $primary-color;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px 27px 20px;
+    &__404 {
+        font-size: 96px;
+        font-weight: 700;
+        margin: 113px 0 113px 0;
+        @media(min-width:710px){
+            font-size: 288px;
+            margin: 139px 0 139px 0;
+            padding: 0 30px 0 30px;
+        }
+    }
+    &__message {
+        font-weight: 500;
+        font-size: 18px;
+        width: 70%;
+        text-align: center;
+        margin-bottom: 113px;
+        @media(min-width:710px) {
+            font-size: 36px; 
+            width: 90%;       
+            margin-bottom: 139px;
+        }
+    }
+    &__homeLink {
+        color: black;
+        font-weight: 500;
+        font-size: 14px;
+        margin-bottom: 139px;
+        @media(min-width:710px){
+            font-size: 18px;
+        }
+    }
+}
