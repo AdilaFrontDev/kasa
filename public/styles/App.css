@@ -408,7 +408,7 @@ body {
 }
 .Star-item {
   width: 13px;
-  height: 13, 4px;
+  height: 13.4px;
   fill: #FF6060;
 }
 @media (min-width: 710px) {
@@ -421,7 +421,6 @@ body {
 .Tag {
   display: flex;
   justify-content: flex-start;
-  align-items: space-around;
   gap: 10px;
 }
 .Tag-item {
@@ -583,7 +582,6 @@ body {
 .FicheLogement__details__goodInformation {
   display: flex;
   justify-content: space-between;
-  align-items: space-between;
   flex-direction: column;
   gap: 10px;
   padding: 10px 0 3px 0;
