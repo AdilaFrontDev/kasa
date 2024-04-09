@@ -6,13 +6,13 @@ function Banner({banner}) {
     return(
         <div className='Banner'>
             <img className='Banner-img' src={banner.picture} alt="banner" />
-            <p className='Banner-text'>{banner.text}</p>
+            <p className='Banner-text' data-text={banner.text}>{banner.text}</p>
         </div>
     )
 }
 
 Banner.propTypes = {
-    banner: PropTypes.string,
+    banner: PropTypes.object,
 }
 
 export default Banner
