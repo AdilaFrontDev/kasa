@@ -290,7 +290,7 @@ body {
   }
 }
 .Collapse .hidden {
-  animation-duration: 4s;
+  animation-duration: 0.4s;
   animation-name: hiddeCollapse;
   animation-fill-mode: forwards;
 }
