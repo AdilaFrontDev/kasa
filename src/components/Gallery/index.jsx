@@ -1,4 +1,6 @@
 import '../../utiles/styles/App.scss'
+import PropTypes from 'prop-types'
+
 
 import { useState } from 'react'
 
@@ -45,9 +47,11 @@ function Gallery({pictures}) {
             </div>
         )
     }
+}
 
 
-    
+Gallery.propTypes = {
+    pictures: PropTypes.array,
 }
 
 export default Gallery

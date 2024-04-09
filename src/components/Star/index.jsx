@@ -1,4 +1,6 @@
 import '../../utiles/styles/App.scss'
+import PropTypes from 'prop-types'
+
 
 function Star({rating}) {
 
@@ -29,7 +31,10 @@ function Star({rating}) {
             ))}   
         </div>
     )
+}
 
+Star.propTypes = {
+    rating: PropTypes.number,
 }
 
 export default Star

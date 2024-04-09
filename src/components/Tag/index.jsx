@@ -1,4 +1,5 @@
 import '../../utiles/styles/App.scss'
+import PropTypes from 'prop-types'
 
 function Tag({tags}) {
     return(
@@ -8,6 +9,10 @@ function Tag({tags}) {
             ))}
         </div>
     )
+}
+
+Tag.propTypes = {
+    tags: PropTypes.array,
 }
 
 export default Tag

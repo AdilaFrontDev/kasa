@@ -65,13 +65,13 @@
         
     }
     .hidden{
-        animation-duration: 0.5s;
+        animation-duration: 4s;
         animation-name: hiddeCollapse;    
-        animation-fill-mode: forwards;    
+        animation-fill-mode: forwards;  
     }
     .show{
-        animation-duration: 0.5s;
+        animation-duration: 0.4s;
         animation-name: hiddeCollapseOut;
-        animation-fill-mode: backwards;        
+        animation-fill-mode: backwards;     
     }
 }

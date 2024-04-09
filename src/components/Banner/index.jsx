@@ -1,4 +1,6 @@
 import '../../utiles/styles/App.scss'
+import PropTypes from 'prop-types'
+
 
 function Banner({banner}) {
     return(
@@ -7,6 +9,10 @@ function Banner({banner}) {
             <p className='Banner-text'>{banner.text}</p>
         </div>
     )
+}
+
+Banner.propTypes = {
+    banner: PropTypes.string,
 }
 
 export default Banner

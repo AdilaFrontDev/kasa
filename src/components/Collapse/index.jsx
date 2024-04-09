@@ -1,5 +1,5 @@
 import '../../utiles/styles/App.scss'
-import React from 'react'
+import PropTypes from 'prop-types'
 
 import { useState } from 'react'
 
@@ -26,6 +26,11 @@ function Collapse({title, content}) {
             </div>
         </div>
     )
+}
+
+Collapse.propTypes = {
+    title: PropTypes.string,
+    content: PropTypes.array,
 }
 
 export default Collapse

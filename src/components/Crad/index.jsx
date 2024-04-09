@@ -1,8 +1,8 @@
 import '../../utiles/styles/App.scss'
-import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
 
-function Crad({title, cover}) {
+function Card({title, cover}) {
     return(
         <div className='Card'>
             <img className='Card-cover' src={cover} alt="photo de couversture de l'annonce"/>
@@ -11,4 +11,10 @@ function Crad({title, cover}) {
     )
 }
 
-export default Crad
+Card.propTypes = {
+    title: PropTypes.string,
+    cover: PropTypes.string,
+}
+
+export default Card
+
