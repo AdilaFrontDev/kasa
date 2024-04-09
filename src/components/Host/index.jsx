@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 
 function Host({name, picture}) {
+    // get the name and the first name separated
     const splitName = name.split(' ')
     return(
         <div className='Host'>

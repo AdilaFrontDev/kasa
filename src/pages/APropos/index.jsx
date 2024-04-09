@@ -11,6 +11,7 @@ import BannerAPropos from '../../assets/banner-apropos.png'
 
 function APropos() {
     
+    // create an object for the banner props
     const banner = { picture: BannerAPropos, text: ''}
 
     return(

@@ -5,8 +5,10 @@ import PropTypes from 'prop-types'
 function Star({rating}) {
 
     const colorOn = "#FF6060"
+    // set the list with the keys for the map and the default color
     let starColor = [{"id":"1", "value" :"#E3E3E3"}, {"id":"2", "value" :"#E3E3E3"}, {"id":"3", "value" :"#E3E3E3"}, {"id":"4", "value" :"#E3E3E3"}, {"id":"5", "value" :"#E3E3E3"}]
 
+    // change the color of the rating first stars
     for (let i = 0; i < rating; i++) {
         starColor[i].value = colorOn
     }

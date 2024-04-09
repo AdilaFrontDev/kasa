@@ -4,6 +4,7 @@ import Home from '../Home'
 
 function Error() {
     return(
+        /* eslint-disable */
         <div className='Error'>
             <p className='Error__404'>404</p>
             <p className='Error__message'>Oups! La page que vous demandez n'existe pas.</p>

@@ -14,15 +14,17 @@ import Error from '../Error'
 
 function FicheLogement() {
     const {annonceId} = useParams()
-
+    // get the current URL id
     let location = useLocation()
+    // compare this URL id to those existing 
     const idList = annonces.map((id) => (`/FicheLogement/${id.id}`))
     const isIdChecked= idList.includes(location.pathname)
-    console.log(isIdChecked)
     
     if (!isIdChecked) {
+        // redirect to the Error page if the id doesn't exist
         return <Error/>
     } else if (isIdChecked) {
+        // create the page related to this id
         const annonce = annonces.find((obj) => (obj.id === annonceId))
         const host = annonce.host
         return(

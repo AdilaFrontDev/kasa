@@ -8,6 +8,7 @@ import iconCollapse from '../../assets/collapse-icon.png'
 function Collapse({title, content}) {
     const [isActive, setActive] = useState("false")
 
+    // this function allows to toggle the transition and animation 
     function toogleCollapse(e){
         e.preventDefault()
         e.stopPropagation()

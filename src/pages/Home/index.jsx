@@ -1,4 +1,3 @@
-// import { useState } from 'react'
 import '../../utiles/styles/App.scss'
 import {annonces} from '../../datas/annonces'
 import { Link } from 'react-router-dom'
@@ -10,7 +9,7 @@ import Card from '../../components/Crad'
 
 
 function Home() {
-
+  // create an object for the banner props
   const banner = { picture: BannerHome, text: 'Chez vous, partout et ailleurs'}
 
     return (
