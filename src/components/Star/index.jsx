@@ -35,8 +35,9 @@ function Star({rating}) {
     )
 }
 
+// The type of rating is a string not a number !!!
 Star.propTypes = {
-    rating: PropTypes.number,
+    rating: PropTypes.string,
 }
 
 export default Star
